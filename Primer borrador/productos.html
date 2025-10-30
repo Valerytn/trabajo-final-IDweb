@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Bowls - Munay Bowl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="contenedor">
+                <div class="nav-contenido">
+                    <div class="logo">
+                        <h1>Munay Bowl</h1>
+                        <span class="logo-subtitulo">Energía Andina</span>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" class="nav-enlace">Inicio</a></li>
+                        <li><a href="productos.html" class="nav-enlace activo">Nuestros Bowls</a></li>
+                        <li><a href="personaliza.html" class="nav-enlace">Personaliza</a></li>
+                        <li><a href="carrito.html" class="nav-enlace">Carrito <span class="carrito-contador" id="carrito-contador">0</span></a></li>
+                    </ul>
+                    <div class="nav-hamburguesa" id="nav-hamburguesa">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero-productos">
+            <div class="contenedor">
+                <div class="hero-contenido">
+                    <h2 class="hero-titulo">Nuestros <span class="hero-titulo-destacado">Bowls</span></h2>
+                    <p class="hero-descripcion">Cada bowl está cuidadosamente elaborado con ingredientes andinos auténticos y superalimentos naturales para brindarte la máxima energía y nutrición.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Bowls Detallados -->
+        <section class="seccion seccion-productos">
+            <div class="contenedor">
+                <div class="productos-grid">
+                    <!-- Bowl Clásico Energía -->
+                    <article class="producto-detallado">
+                        <div class="producto-imagen-container">
+                            <div class="producto-imagen bowl-clasico"></div>
+                            <div class="producto-badge">Más Popular</div>
+                        </div>
+                        <div class="producto-contenido">
+                            <h3 class="producto-nombre">Bowl Clásico Energía</h3>
+                            <p class="producto-precio">S/ 18.90</p>
+                            <p class="producto-descripcion">
+                                Nuestro bowl más tradicional combina la cremosidad del yogurt griego con la textura crujiente de la avena, 
+                                endulzado naturalmente con arándanos frescos y enriquecido con semillas de chía.
+                            </p>
+                            
+                            <div class="ingredientes-detallados">
+                                <h4>Ingredientes:</h4>
+                                <ul>
+                                    <li>Yogurt griego natural (150g)</li>
+                                    <li>Avena orgánica (40g)</li>
+                                    <li>Arándanos frescos (50g)</li>
+                                    <li>Semillas de chía (1 cucharada)</li>
+                                    <li>Miel de abeja (1 cucharadita)</li>
+                                </ul>
+                            </div>
+
+                            <div class="beneficios-nutricionales">
+                                <h4>Beneficios Nutricionales:</h4>
+                                <div class="beneficios-grid">
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">💪</span>
+                                        <span>Proteína: 15g</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🌾</span>
+                                        <span>Fibra: 8g</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🫐</span>
+                                        <span>Antioxidantes</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">⚡</span>
+                                        <span>Energía sostenida</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="boton-principal" onclick="agregarAlCarrito('clasico', 'Bowl Clásico Energía', 18.90)">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Bowl Andino Power -->
+                    <article class="producto-detallado">
+                        <div class="producto-imagen-container">
+                            <div class="producto-imagen bowl-andino"></div>
+                            <div class="producto-badge">Superfood</div>
+                        </div>
+                        <div class="producto-contenido">
+                            <h3 class="producto-nombre">Bowl Andino Power</h3>
+                            <p class="producto-precio">S/ 22.90</p>
+                            <p class="producto-descripcion">
+                                Una explosión de energía andina con quinua y kiwicha, dos superalimentos ancestrales que te darán 
+                                la fuerza necesaria para enfrentar el día con vitalidad y resistencia.
+                            </p>
+                            
+                            <div class="ingredientes-detallados">
+                                <h4>Ingredientes:</h4>
+                                <ul>
+                                    <li>Yogurt griego natural (150g)</li>
+                                    <li>Quinua cocida (60g)</li>
+                                    <li>Kiwicha inflada (30g)</li>
+                                    <li>Plátano maduro (1 unidad)</li>
+                                    <li>Miel de abeja (1 cucharada)</li>
+                                    <li>Polvo de maca (1/2 cucharadita)</li>
+                                </ul>
+                            </div>
+
+                            <div class="beneficios-nutricionales">
+                                <h4>Beneficios Nutricionales:</h4>
+                                <div class="beneficios-grid">
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🏔️</span>
+                                        <span>Proteína completa</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">⚡</span>
+                                        <span>Energía duradera</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🧠</span>
+                                        <span>Concentración</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">💪</span>
+                                        <span>Resistencia</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="boton-principal" onclick="agregarAlCarrito('andino', 'Bowl Andino Power', 22.90)">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Bowl Tropical Frescura -->
+                    <article class="producto-detallado">
+                        <div class="producto-imagen-container">
+                            <div class="producto-imagen bowl-tropical"></div>
+                            <div class="producto-badge">Refrescante</div>
+                        </div>
+                        <div class="producto-contenido">
+                            <h3 class="producto-nombre">Bowl Tropical Frescura</h3>
+                            <p class="producto-precio">S/ 20.90</p>
+                            <p class="producto-descripcion">
+                                Un viaje tropical en cada cucharada. La dulzura del mango y la acidez de la piña se combinan 
+                                perfectamente con la cremosidad del yogurt y el toque exótico del coco.
+                            </p>
+                            
+                            <div class="ingredientes-detallados">
+                                <h4>Ingredientes:</h4>
+                                <ul>
+                                    <li>Yogurt natural (150g)</li>
+                                    <li>Mango maduro (80g)</li>
+                                    <li>Piña fresca (60g)</li>
+                                    <li>Coco rallado (2 cucharadas)</li>
+                                    <li>Semillas de chía (1 cucharada)</li>
+                                    <li>Granola de coco (30g)</li>
+                                </ul>
+                            </div>
+
+                            <div class="beneficios-nutricionales">
+                                <h4>Beneficios Nutricionales:</h4>
+                                <div class="beneficios-grid">
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🍊</span>
+                                        <span>Vitamina C</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">💧</span>
+                                        <span>Hidratación</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🌴</span>
+                                        <span>Grasas saludables</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">😊</span>
+                                        <span>Mood booster</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="boton-principal" onclick="agregarAlCarrito('tropical', 'Bowl Tropical Frescura', 20.90)">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Bowl Antioxidante -->
+                    <article class="producto-detallado">
+                        <div class="producto-imagen-container">
+                            <div class="producto-imagen bowl-antioxidante"></div>
+                            <div class="producto-badge">Antioxidante</div>
+                        </div>
+                        <div class="producto-contenido">
+                            <h3 class="producto-nombre">Bowl Antioxidante</h3>
+                            <p class="producto-precio">S/ 19.90</p>
+                            <p class="producto-descripcion">
+                                Una bomba de antioxidantes naturales que combina la potencia de los arándanos y fresas con 
+                                la nutrición de la avena y las semillas, perfecto para mantener tu sistema inmunológico fuerte.
+                            </p>
+                            
+                            <div class="ingredientes-detallados">
+                                <h4>Ingredientes:</h4>
+                                <ul>
+                                    <li>Yogurt griego natural (150g)</li>
+                                    <li>Avena orgánica (40g)</li>
+                                    <li>Arándanos frescos (40g)</li>
+                                    <li>Fresas frescas (40g)</li>
+                                    <li>Mix de semillas (chía, linaza, ajonjolí)</li>
+                                    <li>Miel de abeja (1 cucharadita)</li>
+                                </ul>
+                            </div>
+
+                            <div class="beneficios-nutricionales">
+                                <h4>Beneficios Nutricionales:</h4>
+                                <div class="beneficios-grid">
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🛡️</span>
+                                        <span>Sistema inmune</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">💜</span>
+                                        <span>Antioxidantes</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">❤️</span>
+                                        <span>Salud cardiovascular</span>
+                                    </div>
+                                    <div class="beneficio">
+                                        <span class="beneficio-icono">🧠</span>
+                                        <span>Función cerebral</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="boton-principal" onclick="agregarAlCarrito('antioxidante', 'Bowl Antioxidante', 19.90)">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección CTA -->
+        <section class="seccion seccion-cta">
+            <div class="contenedor">
+                <div class="cta-contenido">
+                    <h3>¿No encuentras lo que buscas?</h3>
+                    <p>Crea tu propio bowl personalizado con los ingredientes que más te gusten</p>
+                    <a href="personaliza.html" class="boton-principal">Personalizar Bowl</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-contenido">
+                <div class="footer-seccion">
+                    <h4>Munay Bowl</h4>
+                    <p>Energía natural andina en cada cucharada</p>
+                </div>
+                <div class="footer-seccion">
+                    <h5>Enlaces</h5>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="personaliza.html">Personaliza</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="footer-seccion">
+                    <h5>Contacto</h5>
+                    <p> info@munaybowl.com</p>
+                    <p> +51 999 888 777</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Munay Bowl. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu Bowl - Munay Bowl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="contenedor">
+                <div class="nav-contenido">
+                    <div class="logo">
+                        <h1>Munay Bowl</h1>
+                        <span class="logo-subtitulo">Energía Andina</span>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" class="nav-enlace">Inicio</a></li>
+                        <li><a href="productos.html" class="nav-enlace">Nuestros Bowls</a></li>
+                        <li><a href="personaliza.html" class="nav-enlace activo">Personaliza</a></li>
+                        <li><a href="carrito.html" class="nav-enlace">Carrito <span class="carrito-contador" id="carrito-contador">0</span></a></li>
+                    </ul>
+                    <div class="nav-hamburguesa" id="nav-hamburguesa">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero-personaliza">
+            <div class="contenedor">
+                <div class="hero-contenido">
+                    <h2 class="hero-titulo">Personaliza tu <span class="hero-titulo-destacado">Bowl</span></h2>
+                    <p class="hero-descripcion">Crea tu bowl perfecto combinando tus ingredientes favoritos. Cada elección cuenta para tu experiencia nutricional única.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Personalización -->
+        <section class="seccion seccion-personalizacion">
+            <div class="contenedor">
+                <div class="personalizacion-contenido">
+                    <!-- Vista previa del bowl -->
+                    <div class="bowl-preview">
+                        <h3>Vista Previa de tu Bowl</h3>
+                        <div class="bowl-personalizado" id="bowl-personalizado">
+                            <div class="bowl-base" id="bowl-base">
+                                <div class="bowl-ingredientes-preview" id="bowl-ingredientes-preview">
+                                    <p class="bowl-vacio">Selecciona tus ingredientes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="precio-personalizado">
+                            <span class="precio-label">Precio total:</span>
+                            <span class="precio-valor" id="precio-total">S/ 0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de personalización -->
+                    <form class="formulario-personalizacion" id="formulario-personalizacion">
+                        <!-- Base -->
+                        <div class="grupo-seleccion">
+                            <h4 class="grupo-titulo">1. Elige tu Base</h4>
+                            <div class="opciones-grid">
+                                <label class="opcion-bowl" data-precio="0">
+                                    <input type="radio" name="base" value="yogurt-griego" required>
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen yogurt-griego"></div>
+                                        <h5>Yogurt Griego</h5>
+                                        <p>+ S/ 0.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="0">
+                                    <input type="radio" name="base" value="yogurt-natural">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen yogurt-natural"></div>
+                                        <h5>Yogurt Natural</h5>
+                                        <p>+ S/ 0.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="2">
+                                    <input type="radio" name="base" value="avena">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen avena"></div>
+                                        <h5>Avena</h5>
+                                        <p>+ S/ 2.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="3">
+                                    <input type="radio" name="base" value="mix-andino">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen mix-andino"></div>
+                                        <h5>Mix Andino</h5>
+                                        <p>+ S/ 3.00</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Frutas -->
+                        <div class="grupo-seleccion">
+                            <h4 class="grupo-titulo">2. Selecciona tus Frutas</h4>
+                            <div class="opciones-grid">
+                                <label class="opcion-bowl" data-precio="3">
+                                    <input type="checkbox" name="frutas" value="arandanos">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen arandanos"></div>
+                                        <h5>Arándanos</h5>
+                                        <p>+ S/ 3.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="2">
+                                    <input type="checkbox" name="frutas" value="platano">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen platano"></div>
+                                        <h5>Plátano</h5>
+                                        <p>+ S/ 2.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="4">
+                                    <input type="checkbox" name="frutas" value="mango">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen mango"></div>
+                                        <h5>Mango</h5>
+                                        <p>+ S/ 4.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="3">
+                                    <input type="checkbox" name="frutas" value="fresas">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen fresas"></div>
+                                        <h5>Fresas</h5>
+                                        <p>+ S/ 3.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="3">
+                                    <input type="checkbox" name="frutas" value="piña">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen piña"></div>
+                                        <h5>Piña</h5>
+                                        <p>+ S/ 3.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="2">
+                                    <input type="checkbox" name="frutas" value="manzana">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen manzana"></div>
+                                        <h5>Manzana</h5>
+                                        <p>+ S/ 2.00</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Semillas -->
+                        <div class="grupo-seleccion">
+                            <h4 class="grupo-titulo">3. Añade Semillas</h4>
+                            <div class="opciones-grid">
+                                <label class="opcion-bowl" data-precio="2">
+                                    <input type="checkbox" name="semillas" value="chia">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen chia"></div>
+                                        <h5>Chía</h5>
+                                        <p>+ S/ 2.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="2">
+                                    <input type="checkbox" name="semillas" value="linaza">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen linaza"></div>
+                                        <h5>Linaza</h5>
+                                        <p>+ S/ 2.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="1">
+                                    <input type="checkbox" name="semillas" value="ajonjoli">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen ajonjoli"></div>
+                                        <h5>Ajonjolí</h5>
+                                        <p>+ S/ 1.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="3">
+                                    <input type="checkbox" name="semillas" value="mix-andino">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen mix-semillas"></div>
+                                        <h5>Mix Andino</h5>
+                                        <p>+ S/ 3.00</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Endulzantes -->
+                        <div class="grupo-seleccion">
+                            <h4 class="grupo-titulo">4. Elige tu Endulzante</h4>
+                            <div class="opciones-grid">
+                                <label class="opcion-bowl" data-precio="0">
+                                    <input type="radio" name="endulzante" value="miel" required>
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen miel"></div>
+                                        <h5>Miel de Abeja</h5>
+                                        <p>+ S/ 0.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="1">
+                                    <input type="radio" name="endulzante" value="panela">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen panela"></div>
+                                        <h5>Panela</h5>
+                                        <p>+ S/ 1.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="0">
+                                    <input type="radio" name="endulzante" value="stevia">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen stevia"></div>
+                                        <h5>Stevia</h5>
+                                        <p>+ S/ 0.00</p>
+                                    </div>
+                                </label>
+                                <label class="opcion-bowl" data-precio="0">
+                                    <input type="radio" name="endulzante" value="sin-endulzante">
+                                    <div class="opcion-contenido">
+                                        <div class="opcion-imagen sin-endulzante"></div>
+                                        <h5>Sin Endulzante</h5>
+                                        <p>+ S/ 0.00</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Informacion adicional -->
+                        <div class="grupo-seleccion">
+                            <h4 class="grupo-titulo">5. Información Adicional</h4>
+                            <div class="campo-adicional">
+                                <label for="notas-especiales">Notas especiales (opcional):</label>
+                                <textarea id="notas-especiales" name="notas" placeholder="Alergias, preferencias especiales, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="botones-personalizacion">
+                            <button type="button" class="boton-secundario" onclick="limpiarSeleccion()">Limpiar Seleccion</button>
+                            <button type="submit" class="boton-principal">Agregar al Carrito</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-contenido">
+                <div class="footer-seccion">
+                    <h4>Munay Bowl</h4>
+                    <p>Energia natural andina en cada cucharada</p>
+                </div>
+                <div class="footer-seccion">
+                    <h5>Enlaces</h5>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="personaliza.html">Personaliza</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="footer-seccion">
+                    <h5>Contacto</h5>
+                    <p> info@munaybowl.com</p>
+                    <p> +51 999 888 777</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Munay Bowl. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

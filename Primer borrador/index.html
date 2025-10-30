@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munay Bowl - Bowls Saludables Andinos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="contenedor">
+                <div class="nav-contenido">
+                    <div class="logo">
+                        <h1>Munay Bowl</h1>
+                        <span class="logo-subtitulo">Energía Andina</span>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" class="nav-enlace activo">Inicio</a></li>
+                        <li><a href="productos.html" class="nav-enlace">Nuestros Bowls</a></li>
+                        <li><a href="personaliza.html" class="nav-enlace">Personaliza</a></li>
+                        <li><a href="carrito.html" class="nav-enlace">Carrito <span class="carrito-contador" id="carrito-contador">0</span></a></li>
+                    </ul>
+                    <div class="nav-hamburguesa" id="nav-hamburguesa">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="contenedor">
+                <div class="hero-contenido">
+                    <div class="hero-texto">
+                        <h2 class="hero-titulo">Energía Natural<br><span class="hero-titulo-destacado">Andina</span></h2>
+                        <p class="hero-descripcion">Descubre el poder nutritivo de nuestros bowls artesanales, creados con ingredientes andinos auténticos y superalimentos naturales.</p>
+                        <a href="productos.html" class="boton-principal">Ordenar Ahora</a>
+                    </div>
+                    <div class="hero-imagen">
+                        <div class="bowl-principal">
+                            <div class="bowl-imagen"></div>
+                            <div class="decoracion-andina"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion ¿que es Munay Bowl? -->
+        <section class="seccion seccion-que-es">
+            <div class="contenedor">
+                <div class="que-es-contenido">
+                    <h3 class="seccion-titulo">¿Qué es Munay Bowl?</h3>
+                    <p class="seccion-descripcion">
+                        Munay Bowl nace del amor por la alimentación consciente y el respeto por los ingredientes ancestrales andinos. 
+                        Cada bowl es una experiencia nutritiva que combina la tradición milenaria de los superalimentos andinos 
+                        con técnicas modernas de preparación, creando un desayuno completo y energético.
+                    </p>
+                    <div class="caracteristicas">
+                        <div class="caracteristica">
+                            <div class="caracteristica-icono">🌾</div>
+                            <h4>Ingredientes Andinos</h4>
+                            <p>Quinua, kiwicha, maca y más</p>
+                        </div>
+                        <div class="caracteristica">
+                            <div class="caracteristica-icono">🥄</div>
+                            <h4>Preparación Artesanal</h4>
+                            <p>Hecho con amor y cuidado</p>
+                        </div>
+                        <div class="caracteristica">
+                            <div class="caracteristica-icono">💚</div>
+                            <h4>100% Natural</h4>
+                            <p>Sin conservantes ni aditivos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion Bowls Principales -->
+        <section class="seccion seccion-bowls">
+            <div class="contenedor">
+                <h3 class="seccion-titulo">Nuestros Bowls Estrella</h3>
+                <div class="bowls-grid">
+                    <!-- Bowl Clasico -->
+                    <article class="tarjeta-bowl">
+                        <div class="bowl-imagen-container">
+                            <div class="bowl-imagen bowl-clasico"></div>
+                            <div class="bowl-precio">S/ 18.90</div>
+                        </div>
+                        <div class="bowl-contenido">
+                            <h4 class="bowl-nombre">Bowl Clásico Energía</h4>
+                            <p class="bowl-descripcion">Yogurt griego, avena, arándanos y chía</p>
+                            <div class="bowl-ingredientes">
+                                <span class="ingrediente">Yogurt Griego</span>
+                                <span class="ingrediente">Avena</span>
+                                <span class="ingrediente">Arándanos</span>
+                                <span class="ingrediente">Chía</span>
+                            </div>
+                            <button class="boton-secundario" onclick="agregarAlCarrito('clasico', 'Bowl Clásico Energía', 18.90)">Agregar al Carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Bowl Andino -->
+                    <article class="tarjeta-bowl">
+                        <div class="bowl-imagen-container">
+                            <div class="bowl-imagen bowl-andino"></div>
+                            <div class="bowl-precio">S/ 22.90</div>
+                        </div>
+                        <div class="bowl-contenido">
+                            <h4 class="bowl-nombre">Bowl Andino Power</h4>
+                            <p class="bowl-descripcion">Yogurt griego, quinua, kiwicha, miel y plátano</p>
+                            <div class="bowl-ingredientes">
+                                <span class="ingrediente">Quinua</span>
+                                <span class="ingrediente">Kiwicha</span>
+                                <span class="ingrediente">Miel</span>
+                                <span class="ingrediente">Plátano</span>
+                            </div>
+                            <button class="boton-secundario" onclick="agregarAlCarrito('andino', 'Bowl Andino Power', 22.90)">Agregar al Carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Bowl Tropical -->
+                    <article class="tarjeta-bowl">
+                        <div class="bowl-imagen-container">
+                            <div class="bowl-imagen bowl-tropical"></div>
+                            <div class="bowl-precio">S/ 20.90</div>
+                        </div>
+                        <div class="bowl-contenido">
+                            <h4 class="bowl-nombre">Bowl Tropical Frescura</h4>
+                            <p class="bowl-descripcion">Mango, piña, yogurt, coco y chía</p>
+                            <div class="bowl-ingredientes">
+                                <span class="ingrediente">Mango</span>
+                                <span class="ingrediente">Piña</span>
+                                <span class="ingrediente">Coco</span>
+                                <span class="ingrediente">Chía</span>
+                            </div>
+                            <button class="boton-secundario" onclick="agregarAlCarrito('tropical', 'Bowl Tropical Frescura', 20.90)">Agregar al Carrito</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-contenido">
+                <div class="footer-seccion">
+                    <h4>Munay Bowl</h4>
+                    <p>Energía natural andina en cada cucharada</p>
+                </div>
+                <div class="footer-seccion">
+                    <h5>Enlaces</h5>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="personaliza.html">Personaliza</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="footer-seccion">
+                    <h5>Contacto</h5>
+                    <p> info@munaybowl.com</p>
+                    <p> +51 999 888 777</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Munay Bowl. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
