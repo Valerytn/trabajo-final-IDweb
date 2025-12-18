@@ -1,0 +1,123 @@
+
+/* Contenedor del login */
+#login {
+  width: 320px;
+  margin: 120px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+/* Inputs */
+#login input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+#login input:focus {
+  border-color: #4CAF50;
+}
+
+/* Botón */
+#login button {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#login button:hover {
+  background: #43a047;
+}
+
+/* Mensaje de error */
+#error {
+  margin-top: 12px;
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Panel general */
+#panel {
+  width: 95%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+#panel h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+/* Tabla */
+#tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+/* Encabezados */
+#tabla thead {
+  background: #4CAF50;
+  color: white;
+}
+
+#tabla th {
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Filas */
+#tabla td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover filas */
+#tabla tbody tr:hover {
+  background: #f5f5f5;
+}
+
+/* Columna mensaje más ancha */
+#tabla td:nth-child(5) {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+/* Responsive simple */
+@media (max-width: 768px) {
+  #panel {
+    padding: 20px;
+  }
+
+  #tabla {
+    font-size: 13px;
+  }
+
+  #tabla th,
+  #tabla td {
+    padding: 10px;
+  }
+}

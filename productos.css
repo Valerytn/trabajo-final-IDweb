@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Estilo base del body */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/fondo2.png') no-repeat center center fixed; /* colores */
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Contenedor principal con efecto vidrio y elevación */
+.contenedor-general {
+    background-color: rgba(75, 155, 75, 0.6); /* verde pastel semitransparente */
+    background: radial-gradient(circle, #5f8127, #c0b12ea2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* borde transparente */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.493); /* efecto elevación */
+    margin: 40px;
+    padding: 30px;
+    width: 100%;
+    max-width: 12000px;
+}
+
+/* Menú básico */
+.menu a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Slider */
+.slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Footer */
+.footer {
+    padding: 100px 20px;
+    text-align: center;
+    color: rgb(248, 242, 242);
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.main {
+    margin-top: 180px; /* ajusta si quieres más o menos */
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    position:absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.menu-1{
+    margin-right: 25px;
+    align-items: center;
+}
+
+.menu-2{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-1{
+    width: 125px;
+    height: 125px;
+}
+
+.logo-2{
+    width: 150px;
+    height: 150px;
+    margin-left: 140px;
+}
+
+.socials{
+    display: flex;
+}
+
+.social{
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #175815;
+    border-radius: 50%;
+}
+
+.social:hover{
+    background-color: #226135;
+}
+
+.social img{
+    margin: 8px 0 0 10px;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color:#b1dfa8;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.carrito-contador{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+
+    background-color: #DB241B;
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.header-content{
+    margin-top: 200px;
+    padding-bottom: 50px;
+}
+
+/* ===== PRODUCTOS – BASE ===== */
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* ===== HERO PRODUCTOS ===== */
+.productos-container {
+    padding: 80px;
+    text-align: center;
+}
+
+.productos-container h2 {
+    color: #fff;
+}
+
+.productos-container p {
+    color: #bbb;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.productos-titulo {
+    font-size: 5rem;      /* tamaño del texto */
+    color: #ffffff;       /* color blanco */
+    margin-bottom: 1rem;
+}
+
+.productos-titulo-destacado {
+    color: #a52121;       /* verde bonito */
+}
+
+.productos-descripcion {
+    font-size: 1.1rem;
+    color: #bbbbbb;       /* gris claro */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.seccion-cta {
+    padding: 4rem 0; /* agrega espacio arriba y abajo */
+    text-align: center; /* centra el contenido */
+}
+
+.seccion-cta h3 {
+    margin-bottom: 1rem; /* separa título del párrafo */
+    font-size: 2rem;
+    color: #fff; /* ajusta según tu fondo */
+}
+
+.seccion-cta p {
+    margin-bottom: 2rem; /* separa párrafo del botón */
+    font-size: 1.1rem;
+    color: #fff; /* ajusta según tu fondo */
+}
+
+.seccion-cta .boton-principal {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.seccion-cta .boton-principal:hover {
+    background-color: #4e7243; /* o tu color de hover */
+}
+
+
+/* ===== GRID DE PRODUCTOS ===== */
+.productos-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+/* ===== TARJETA PRODUCTO ===== */
+.producto-detallado {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    background-color: #6d8651;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* ===== IMAGEN ===== */
+.producto-imagen-container {
+    position: relative;
+}
+
+.resaltada {
+    width: 400px;
+    height: 400px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    margin-top:100px;
+}
+
+.producto-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #d4a574;
+    color: #000;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ===== CONTENIDO ===== */
+.producto-contenido h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.producto-precio {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7ccf9c;
+    margin-bottom: 1rem;
+}
+
+.producto-descripcion {
+    color: #bbb;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ===== INGREDIENTES ===== */
+.ingredientes-detallados h4 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.ingredientes-detallados ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredientes-detallados li {
+    color: #ccc;
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.3rem;
+}
+
+.ingredientes-detallados li::before {
+    content: '•';
+    color: #7ccf9c;
+    position: absolute;
+    left: 0;
+}
+
+/* ===== BENEFICIOS ===== */
+.beneficios-nutricionales h4 {
+    color: #fff;
+    margin: 1.5rem 0 1rem;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.beneficio {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* ===== BOTÓN ===== */
+.boton-principal {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #6b8e4e, #8faf6b);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.boton-principal:hover {
+    filter: brightness(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .producto-detallado {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-imagen {
+        height: 250px;
+    }
+}
+
+
+.info {
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.info-img {
+    width: 50%;
+}
+
+.info-img img {
+    width: 500px;
+    height: 250px;
+}
+
+.info-txt {
+    width: 50%;
+}
+
+.info-txt h2 {
+    font-size: 75px;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.info-txt p {
+    font-size: 18px;
+    color: #A7A7A7;
+    margin-bottom: 50px;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #DB241B;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.horario-info h2 {
+    font-size: 75px;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.horario-txt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt {
+    color: #FFFFFF;
+}
+
+.txt h4 {
+    font-size: 18px;
+    color: #A7A7A7;
+    margin-bottom: 30px;
+}
+
+.txt p {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer {
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links h4 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.links ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu-2 {
+        display: none;
+    }
+
+    .menu-1 {
+        width: 100px;
+    }
+
+    .logo-2 {
+        width: 0;
+    }
+
+    .logo-1 {
+        width: 100px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        padding: 30px;
+        margin-top: 100px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slider-txt {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .slider-txt h1 {
+        font-size: 50px;
+    }
+
+    .slider-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        padding: 10px 25px;
+        font-size: 14px;
+
+    }
+
+    .slider-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider-img img{
+        margin-right: 0px;
+        width: 300px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets, .swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -7px;
+    }
+
+    .tabs {
+        padding: 50px 30px;
+    }
+
+    .tabs label {
+        width: 33%;
+    }
+
+    .info {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .btn-1 {
+        font-size: 16px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .social img {
+        margin: 8px 0 0 0;
+    }
+
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links h4 {
+        margin: 25px 0px 10px 0px;
+    }
+
+}

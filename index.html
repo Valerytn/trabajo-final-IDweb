@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="contenedor-general">
+    <header>
+        <div class="menu container">
+            <img class="logo-1" src="images/logooo.png" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                  <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-enlace activo">Inicio</a></li>
+                    <li><a href="personaliza.html" class="nav-enlace">Personaliza</a></li>
+                    <li><a href="nosotros.html" class="nav-enlace">Nosotros</a></li>
+                    
+                  </ul>
+                </div>
+                <img class="logo-2" src="images/logooo.png" alt="">
+
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="carrito.html" class="nav-enlace">Carrito <span id="carrito-contador" class="carrito-contador">0</span></a></li>
+                    </ul>
+                    <div class="socials">
+                        <a href="https://www.facebook.com">
+                            <div class="social">
+                                <img src="images/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <div class="social">
+                                <img src="images/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <div class="social">
+                                <img src="images/s3.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+
+            <div class="swiper mySwiper-1">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Bowl Clásico Energía</h1>
+                                <p>
+                                  <span class="ingrediente">Yogurt Griego</span>
+                                  <span class="ingrediente">Arándanos</span>
+                                  <span class="ingrediente">Fresas</span>
+                                  <span class="ingrediente">Chía y semillas</span>
+                                </p>
+                                <p>$ 6.00</p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1" onclick="agregarAlCarrito('clasico', 'Bowl Clásico Energía', 6.00)">Comprar</a>
+                                    <a href="productos.html" class="btn-1">Menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/slider2.png" alt="" class="resaltada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Bowl Andino Power</h1>
+                                <p>
+                                  <span class="ingrediente">Quinua</span>
+                                  <span class="ingrediente">Kiwicha</span>
+                                  <span class="ingrediente">Miel</span>
+                                  <span class="ingrediente">Plátano</span>
+                                  <span class="ingrediente">Arándanos</span>
+                                </p>
+                                <p>$ 7.00</p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1" onclick="agregarAlCarrito('andino', 'Bowl Andino Power', 7.00)">Comprar</a>
+                                    <a href="productos.html" class="btn-1">Menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/slider1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Bowl Tropical Frescura</h1>
+                                <p>
+                                  <span class="ingrediente">Mango</span>
+                                  <span class="ingrediente">Piña</span>
+                                  <span class="ingrediente">Coco</span>
+                                  <span class="ingrediente">Chía</span>
+                                </p>
+                                <p>$ 6.00</p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1" onclick="agregarAlCarrito('clasico', 'Bowl Clásico Energía', 18.90)">Comprar</a>
+                                    <a href="productos.html" class="btn-1">Menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/slider3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+        </div>
+    </header>
+
+<!-- FOOTER -->
+
+      <footer class="footer container">
+        <img class="logo-2" src="images/logooo.png" alt="">
+        <div class="links">
+            <h4>Navegacion</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="personaliza.html">Personaliza</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+        </div>
+        <div class="links">
+            <h4>Contactos</h4>
+              <ul>
+                  <li><a href="contacto.html" class="nav-enlace">Enviar mensaje</a></li>
+                  <li><a href="admi.html">Administración</a></li>
+              </ul>
+            <h4>Horarios</h4>
+            <ul>
+              <li>LUNES A VIERNES : 7:00am - 4:00pm</li>
+              <li>SABADO Y DOMINGO : 8:00am - 2:00pm</li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Redes sociales</h4>
+            <div class="socials">
+                <a href="https://www.facebook.com">
+                    <div class="social">
+                        <img src="images/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.twitter.com">
+                    <div class="social">
+                        <img src="images/s2.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com">
+                    <div class="social">
+                        <img src="images/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="index.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="stydes.css">    
+</head>
+<body>
+<div class="contenedor-general">
+    <header>
+        <div class="menu container">
+            <img class="logo-1" src="images/logooo.png" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                  <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-enlace activo">Inicio</a></li>
+                    <li><a href="personaliza.html" class="nav-enlace">Personaliza</a></li>
+                    <li><a href="nosotros.html" class="nav-enlace">Nosotros</a></li>
+                    
+                  </ul>
+                </div>
+                <img class="logo-2" src="images/logooo.png" alt="">
+
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="carrito.html" class="nav-enlace">Carrito <span id="carrito-contador" class="carrito-contador">0</span></a></li>
+                    </ul>
+                    <div class="socials">
+                      <a href="https://www.facebook.com">
+                          <div class="social">
+                              <img src="images/s1.svg" alt="">
+                          </div>
+                      </a>
+                      <a href="https://www.twitter.com">
+                          <div class="social">
+                              <img src="images/s2.svg" alt="">
+                          </div>
+                      </a>
+                      <a href="https://www.instagram.com">
+                          <div class="social">
+                              <img src="images/s3.svg" alt="">
+                          </div>
+                      </a>
+                  </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+  <main class="main">
+    <section class="hero hero-carrito">
+      <div class="contenedor hero-contenido">
+        <h2 class="hero-titulo">Tu <span class="hero-titulo-destacado">Carrito</span></h2>
+        <p class="hero-descripcion">Revisa tus bowls seleccionados y completa tu pedido</p>
+      </div>
+    </section>
+
+    <section class="seccion seccion-carrito">
+      <div class="contenedor carrito-contenido">
+        <div class="carrito-productos">
+          <h3>Productos en tu carrito</h3>
+          <div id="carrito-lista" class="carrito-lista"></div>
+
+          <div id="carrito-vacio" class="carrito-vacio">
+            <div class="carrito-vacio-icono">🛒</div>
+            <h4>Tu carrito está vacío</h4>
+            <p>Agrega bowls para comenzar</p>
+            <a href="productos.html" class="boton-principal">Ver Productos</a>
+          </div>
+        </div>
+
+        <aside class="carrito-resumen">
+          <h3>Resumen del Pedido</h3>
+          <div class="resumen-detalles">
+            <div class="resumen-item"><span>Subtotal:</span><span id="subtotal">S/ 0.00</span></div>
+            <div class="resumen-item"><span>Delivery:</span><span id="delivery">S/ 5.00</span></div>
+            <div class="resumen-item resumen-total"><span>Total:</span><span id="total">S/ 5.00</span></div>
+          </div>
+
+          <div class="info-entrega">
+            <h4>Información de Entrega</h4>
+            <div class="campo-entrega"><label for="nombre-cliente">Nombre:</label><input id="nombre-cliente" required></div>
+            <div class="campo-entrega"><label for="telefono-cliente">Teléfono:</label><input id="telefono-cliente" required></div>
+            <div class="campo-entrega"><label for="direccion-cliente">Dirección:</label><textarea id="direccion-cliente" required placeholder="Calle, número, distrito"></textarea></div>
+          </div>
+
+          <div class="carrito-botones">
+            <button class="boton-secundario" onclick="limpiarCarrito()">Limpiar Carrito</button>
+            <button id="boton-procesar" class="boton-principal" onclick="procesarPedido()" disabled>Procesar Pedido</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+<!-- Modal de confirmacion -->
+    <div class="modal" id="modal-confirmacion">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3>¡Pedido Confirmado!</h3>
+                <button class="modal-cerrar" onclick="cerrarModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="confirmacion-icono">✅</div>
+                <p>Tu pedido ha sido procesado exitosamente.</p>
+                <p>Recibirás una llamada de confirmación en los próximos minutos.</p>
+                <div class="confirmacion-detalles">
+                    <p><strong>Número de pedido:</strong> <span id="numero-pedido"></span></p>
+                    <p><strong>Tiempo estimado de entrega:</strong> 30-45 minutos</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="boton-principal" onclick="cerrarModal()">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+<!-- FOOTER -->
+
+      <footer class="footer container">
+        <img class="logo-2" src="images/logooo.png" alt="">
+        <div class="links">
+            <h4>Navegacion</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="personaliza.html">Personaliza</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+        </div>
+        <div class="links">
+            <h4>Contactos</h4>
+              <ul>
+                  <li><a href="contacto.html" class="nav-enlace">Enviar mensaje</a></li>
+                  <li><a href="admi.html">Administración</a></li>
+              </ul>
+            <h4>Horarios</h4>
+            <ul>
+              <li>LUNES A VIERNES : 7:00am - 4:00pm</li>
+              <li>SABADO Y DOMINGO : 8:00am - 2:00pm</li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Redes sociales</h4>
+            <div class="socials">
+                <a href="https://www.facebook.com">
+                    <div class="social">
+                        <img src="images/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.twitter.com">
+                    <div class="social">
+                        <img src="images/s2.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com">
+                    <div class="social">
+                        <img src="images/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

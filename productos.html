@@ -3,44 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Bowls - Munay Bowl</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="productos.css">
+    <link rel="stylesheet" href="styljes.css">    
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="contenedor">
-                <div class="nav-contenido">
-                    <div class="logo">
-                        <h1>Munay Bowl</h1>
-                        <span class="logo-subtitulo">Energía Andina</span>
-                    </div>
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="index.html" class="nav-enlace">Inicio</a></li>
-                        <li><a href="productos.html" class="nav-enlace activo">Nuestros Bowls</a></li>
-                        <li><a href="personaliza.html" class="nav-enlace">Personaliza</a></li>
-                        <li><a href="carrito.html" class="nav-enlace">Carrito <span class="carrito-contador" id="carrito-contador">0</span></a></li>
+<div class="contenedor-general">
+    <header>
+        <div class="menu container">
+            <img class="logo-1" src="images/logooo.png" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                  <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-enlace activo">Inicio</a></li>
+                    <li><a href="personaliza.html" class="nav-enlace">Personaliza</a></li>
+                    <li><a href="nosotros.html" class="nav-enlace">Nosotros</a></li>
+                    
+                  </ul>
+                </div>
+                <img class="logo-2" src="images/logooo.png" alt="">
+
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="carrito.html" class="nav-enlace">Carrito <span id="carrito-contador" class="carrito-contador">0</span></a></li>
                     </ul>
-                    <div class="nav-hamburguesa" id="nav-hamburguesa">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <div class="socials">
+                        <a href="https://www.facebook.com">
+                            <div class="social">
+                                <img src="images/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <div class="social">
+                                <img src="images/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <div class="social">
+                                <img src="images/s3.svg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
-    <!-- Main -->
     <main class="main">
-        <!-- Hero Section -->
-        <section class="hero hero-productos">
-            <div class="contenedor">
-                <div class="hero-contenido">
-                    <h2 class="hero-titulo">Nuestros <span class="hero-titulo-destacado">Bowls</span></h2>
-                    <p class="hero-descripcion">Cada bowl está cuidadosamente elaborado con ingredientes andinos auténticos y superalimentos naturales para brindarte la máxima energía y nutrición.</p>
+        
+        <section class="productos productos-container">
+            <div class="productos-contenedor">
+                <div class="contenido">
+                    <h2 class="productos-titulo">Nuestros <span class="productos-titulo-destacado">Bowls</span></h2>
+                    <p class="productos-descripcion">Cada bowl está cuidadosamente elaborado con ingredientes andinos auténticos y superalimentos naturales para brindarte la máxima energía y nutrición.</p>
                 </div>
             </div>
         </section>
@@ -52,6 +72,7 @@
                     <!-- Bowl Clásico Energía -->
                     <article class="producto-detallado">
                         <div class="producto-imagen-container">
+                            <img src="images/slider2.png" alt="" class="resaltada">
                             <div class="producto-imagen bowl-clasico"></div>
                             <div class="producto-badge">Más Popular</div>
                         </div>
@@ -67,7 +88,7 @@
                                 <h4>Ingredientes:</h4>
                                 <ul>
                                     <li>Yogurt griego natural (150g)</li>
-                                    <li>Avena orgánica (40g)</li>
+                                    <li>fresas (40g)</li>
                                     <li>Arándanos frescos (50g)</li>
                                     <li>Semillas de chía (1 cucharada)</li>
                                     <li>Miel de abeja (1 cucharadita)</li>
@@ -105,12 +126,13 @@
                     <!-- Bowl Andino Power -->
                     <article class="producto-detallado">
                         <div class="producto-imagen-container">
+                            <img src="images/slider1.png" alt="">
                             <div class="producto-imagen bowl-andino"></div>
                             <div class="producto-badge">Superfood</div>
                         </div>
                         <div class="producto-contenido">
                             <h3 class="producto-nombre">Bowl Andino Power</h3>
-                            <p class="producto-precio">S/ 22.90</p>
+                            <p class="producto-precio">S/ 11.00</p>
                             <p class="producto-descripcion">
                                 Una explosión de energía andina con quinua y kiwicha, dos superalimentos ancestrales que te darán 
                                 la fuerza necesaria para enfrentar el día con vitalidad y resistencia.
@@ -159,12 +181,13 @@
                     <!-- Bowl Tropical Frescura -->
                     <article class="producto-detallado">
                         <div class="producto-imagen-container">
+                            <img src="images/slider3.png" alt="" class="resaltada">
                             <div class="producto-imagen bowl-tropical"></div>
                             <div class="producto-badge">Refrescante</div>
                         </div>
                         <div class="producto-contenido">
                             <h3 class="producto-nombre">Bowl Tropical Frescura</h3>
-                            <p class="producto-precio">S/ 20.90</p>
+                            <p class="producto-precio">S/ 10.00</p>
                             <p class="producto-descripcion">
                                 Un viaje tropical en cada cucharada. La dulzura del mango y la acidez de la piña se combinan 
                                 perfectamente con la cremosidad del yogurt y el toque exótico del coco.
@@ -213,12 +236,13 @@
                     <!-- Bowl Antioxidante -->
                     <article class="producto-detallado">
                         <div class="producto-imagen-container">
+                            <img src="images/producto4.png" alt="" class="resaltada">
                             <div class="producto-imagen bowl-antioxidante"></div>
                             <div class="producto-badge">Antioxidante</div>
                         </div>
                         <div class="producto-contenido">
                             <h3 class="producto-nombre">Bowl Antioxidante</h3>
-                            <p class="producto-precio">S/ 19.90</p>
+                            <p class="producto-precio">S/ 10.00</p>
                             <p class="producto-descripcion">
                                 Una bomba de antioxidantes naturales que combina la potencia de los arándanos y fresas con 
                                 la nutrición de la avena y las semillas, perfecto para mantener tu sistema inmunológico fuerte.
@@ -227,12 +251,11 @@
                             <div class="ingredientes-detallados">
                                 <h4>Ingredientes:</h4>
                                 <ul>
-                                    <li>Yogurt griego natural (150g)</li>
-                                    <li>Avena orgánica (40g)</li>
-                                    <li>Arándanos frescos (40g)</li>
-                                    <li>Fresas frescas (40g)</li>
-                                    <li>Mix de semillas (chía, linaza, ajonjolí)</li>
-                                    <li>Miel de abeja (1 cucharadita)</li>
+                                    <li>Avena orgánica (120g)</li>
+                                    <li>Platano (40g)</li>
+                                    <li>Quiwi (40g)</li>
+                                    <li>Mix de semillas (nueces, almendras)</li>
+                                    <li>Moras (20g)</li>
                                 </ul>
                             </div>
 
@@ -277,38 +300,60 @@
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="footer-contenido">
-                <div class="footer-seccion">
-                    <h4>Munay Bowl</h4>
-                    <p>Energía natural andina en cada cucharada</p>
-                </div>
-                <div class="footer-seccion">
-                    <h5>Enlaces</h5>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="personaliza.html">Personaliza</a></li>
-                        <li><a href="carrito.html">Carrito</a></li>
-                    </ul>
-                </div>
-                <div class="footer-seccion">
-                    <h5>Contacto</h5>
-                    <p> info@munaybowl.com</p>
-                    <p> +51 999 888 777</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Munay Bowl. Todos los derechos reservados.</p>
+<!-- FOOTER -->
+
+      <footer class="footer container">
+        <img class="logo-2" src="images/logooo.png" alt="">
+        <div class="links">
+            <h4>Navegacion</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="personaliza.html">Personaliza</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+        </div>
+        <div class="links">
+            <h4>Contactos</h4>
+              <ul>
+                  <li><a href="contacto.html" class="nav-enlace">Enviar mensaje</a></li>
+                  <li><a href="admi.html">Administración</a></li>
+              </ul>
+            <h4>Horarios</h4>
+            <ul>
+              <li>LUNES A VIERNES : 7:00am - 4:00pm</li>
+              <li>SABADO Y DOMINGO : 8:00am - 2:00pm</li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Redes sociales</h4>
+            <div class="socials">
+                <a href="https://www.facebook.com">
+                    <div class="social">
+                        <img src="images/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.twitter.com">
+                    <div class="social">
+                        <img src="images/s2.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com">
+                    <div class="social">
+                        <img src="images/s3.svg" alt="">
+                    </div>
+                </a>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="productos.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-

@@ -3,44 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personaliza tu Bowl - Munay Bowl</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="personaliza.css">
+    <link rel="stylesheet" href="styleds.css">    
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="contenedor">
-                <div class="nav-contenido">
-                    <div class="logo">
-                        <h1>Munay Bowl</h1>
-                        <span class="logo-subtitulo">Energía Andina</span>
-                    </div>
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="index.html" class="nav-enlace">Inicio</a></li>
-                        <li><a href="productos.html" class="nav-enlace">Nuestros Bowls</a></li>
-                        <li><a href="personaliza.html" class="nav-enlace activo">Personaliza</a></li>
-                        <li><a href="carrito.html" class="nav-enlace">Carrito <span class="carrito-contador" id="carrito-contador">0</span></a></li>
+<div class="contenedor-general">
+    <div class="menu container">
+            <img class="logo-1" src="images/logooo.png" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                  <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-enlace activo">Inicio</a></li>
+                    <li><a href="personaliza.html" class="nav-enlace">Personaliza</a></li>
+                    <li><a href="nosotros.html" class="nav-enlace">Nosotros</a></li>
+                    
+                  </ul>
+                </div>
+                <img class="logo-2" src="images/logooo.png" alt="">
+
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="carrito.html" class="nav-enlace">Carrito <span id="carrito-contador" class="carrito-contador">0</span></a></li>
                     </ul>
-                    <div class="nav-hamburguesa" id="nav-hamburguesa">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <div class="socials">
+                        <a href="https://www.facebook.com">
+                            <div class="social">
+                                <img src="images/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <div class="social">
+                                <img src="images/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <div class="social">
+                                <img src="images/s3.svg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </div>
 
     <!-- Main -->
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero hero-personaliza">
-            <div class="contenedor">
-                <div class="hero-contenido">
-                    <h2 class="hero-titulo">Personaliza tu <span class="hero-titulo-destacado">Bowl</span></h2>
-                    <p class="hero-descripcion">Crea tu bowl perfecto combinando tus ingredientes favoritos. Cada elección cuenta para tu experiencia nutricional única.</p>
+        <section class="productos productos-container">
+            <div class="productos-contenedor">
+                <div class="contenido">
+                    <h2 class="productos-titulo">Personaliza tu <span class="productos-titulo-destacado">Bowl</span></h2>
+                    <p class="productos-descripcion">Crea tu bowl perfecto combinando tus ingredientes favoritos. Cada elección cuenta para tu experiencia nutricional única.</p>
                 </div>
             </div>
         </section>
@@ -239,7 +258,7 @@
                             </div>
                         </div>
 
-                        <!-- Informacion adicional -->
+                        <!-- Información adicional -->
                         <div class="grupo-seleccion">
                             <h4 class="grupo-titulo">5. Información Adicional</h4>
                             <div class="campo-adicional">
@@ -250,7 +269,7 @@
 
                         <!-- Botones -->
                         <div class="botones-personalizacion">
-                            <button type="button" class="boton-secundario" onclick="limpiarSeleccion()">Limpiar Seleccion</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarSeleccion()">Limpiar Selección</button>
                             <button type="submit" class="boton-principal">Agregar al Carrito</button>
                         </div>
                     </form>
@@ -259,36 +278,54 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="footer-contenido">
-                <div class="footer-seccion">
-                    <h4>Munay Bowl</h4>
-                    <p>Energia natural andina en cada cucharada</p>
-                </div>
-                <div class="footer-seccion">
-                    <h5>Enlaces</h5>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="personaliza.html">Personaliza</a></li>
-                        <li><a href="carrito.html">Carrito</a></li>
-                    </ul>
-                </div>
-                <div class="footer-seccion">
-                    <h5>Contacto</h5>
-                    <p> info@munaybowl.com</p>
-                    <p> +51 999 888 777</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Munay Bowl. Todos los derechos reservados.</p>
+<!-- FOOTER -->
+
+      <footer class="footer container">
+        <img class="logo-2" src="images/logooo.png" alt="">
+        <div class="links">
+            <h4>Navegacion</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="personaliza.html">Personaliza</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+        </div>
+        <div class="links">
+            <h4>Contactos</h4>
+              <ul>
+                  <li><a href="contacto.html" class="nav-enlace">Enviar mensaje</a></li>
+                  <li><a href="admi.html">Administración</a></li>
+              </ul>
+            <h4>Horarios</h4>
+            <ul>
+              <li>LUNES A VIERNES : 7:00am - 4:00pm</li>
+              <li>SABADO Y DOMINGO : 8:00am - 2:00pm</li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Redes sociales</h4>
+            <div class="socials">
+                <a href="https://www.facebook.com">
+                    <div class="social">
+                        <img src="images/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.twitter.com">
+                    <div class="social">
+                        <img src="images/s2.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com">
+                    <div class="social">
+                        <img src="images/s3.svg" alt="">
+                    </div>
+                </a>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+</div>
+  <script src="script.js"></script>
 </body>
 </html>
-
