@@ -117,6 +117,6 @@ CREATE TABLE usuarios (
 
 ---
 
-## **Autores**
-
+## **Autor**
+Valeria Abigai Ticona Nina
 Proyecto desarrollado con fines académicos para el curso de **Desarrollo Web**.
