@@ -15,12 +15,12 @@ function inicializarApp() {
     actualizarContadorCarrito();
     
     // Cargar carrito si estamos en la página del carrito
-    if (window.location.pathname.includes('carrito.html')) {
+    if (window.location.pathname.includes('/carrito')) {
         cargarCarrito();
     }
     
     // Inicializar personalización si estamos en esa página
-    if (window.location.pathname.includes('personaliza.html')) {
+    if (window.location.pathname.includes('/personaliza')) {
         inicializarPersonalizacion();
     }
     
@@ -84,7 +84,7 @@ function agregarAlCarrito(id, nombre, precio, ingredientes = []) {
     mostrarNotificacion(`${nombre} agregado al carrito`);
     
     // Si estamos en la página del carrito, recargar
-    if (window.location.pathname.includes('carrito.html')) {
+    if (window.location.pathname.includes('/carrito')) {
         cargarCarrito();
     }
 }

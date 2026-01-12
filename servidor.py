@@ -1,162 +1,144 @@
-# servidor.py
-import json
-import os
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-import pymysql  # pip install pymysql
+from flask import Flask, request, jsonify, render_template
+import pymysql
+
+app = Flask(__name__)
 
 # --- CONFIGURACIÓN ---
 DB_CONFIG = {
     'host': 'localhost',
     'port': 3306,
     'user': 'root',
-    'password': 'Munay2026>',  # tu contraseña MySQL
-    'database': 'munay_bowls2'  # nueva base de datos
+    'password': 'Munay2026>',   # tu contraseña MySQL
+    'database': 'munay_bowls2',
+    'cursorclass': pymysql.cursors.DictCursor
 }
 
-PORT = 8000
-# ---------------------
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-class MiHandler(SimpleHTTPRequestHandler):
-    def do_POST(self):
-        if self.path == "/login":
-            length = int(self.headers.get('Content-Length', 0))
-            payload = json.loads(self.rfile.read(length))
+@app.route('/personaliza')
+def personaliza():
+    return render_template('personaliza.html')
 
-            usuario = payload.get("usuario")
-            contrasena = payload.get("contrasena")
+@app.route('/nosotros')
+def nosotros():
+    return render_template('nosotros.html')
 
-            conn = pymysql.connect(**DB_CONFIG)
-            cursor = conn.cursor()
+@app.route('/productos')
+def productos():
+    return render_template('productos.html')
 
-            cursor.execute(
-                "SELECT contrasena FROM usuarios WHERE usuario=%s",
-                (usuario,)
-            )
-            fila = cursor.fetchone()
+@app.route('/carrito')
+def carrito():
+    return render_template('carrito.html')
 
-            ok = False
-            if fila and fila[0] == contrasena:
-                ok = True
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
 
-            cursor.close()
-            conn.close()
-
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.end_headers()
-            self.wfile.write(json.dumps({"ok": ok}).encode())
-            return
-
-        if self.path != '/enviar_contacto':
-            self.send_response(404)
-            self.end_headers()
-            self.wfile.write(b'Ruta no encontrada')
-            return
-
-        # Leer contenido
-        length = int(self.headers.get('Content-Length', 0))
-        raw = self.rfile.read(length) if length > 0 else b''
-
-        # Decodificar JSON
-        try:
-            payload = json.loads(raw.decode('utf-8'))
-        except json.JSONDecodeError:
-            self.send_response(400)
-            self.send_header('Content-Type','text/plain; charset=utf-8')
-            self.end_headers()
-            self.wfile.write('Body inválido: no es JSON'.encode('utf-8'))
-            return
-
-        # Obtener campos
-        nombre_cliente = payload.get('nombre', '').strip()
-        correo_cliente = payload.get('email', '').strip()
-        telefono_cliente = payload.get('telefono', '').strip()
-        mensaje_cliente = payload.get('mensaje', '').strip()
-
-        # Validación mínima
-        if not nombre_cliente or not correo_cliente or not mensaje_cliente:
-            self.send_response(400)
-            self.end_headers()
-            self.wfile.write(b'Faltan campos obligatorios')
-            return
-
-        # Guardar en MySQL
-        try:
-            conn = pymysql.connect(**DB_CONFIG)
-            cursor = conn.cursor()
-            sql = """
-                INSERT INTO formulario_contacto2
-                (nombre_cliente, correo_cliente, telefono_cliente, mensaje_cliente)
-                VALUES (%s, %s, %s, %s)
-            """
-            cursor.execute(sql, (nombre_cliente, correo_cliente, telefono_cliente, mensaje_cliente))
-            conn.commit()
-            cursor.close()
-            conn.close()
-
-            # Responder JSON
-            self.send_response(200)
-            self.send_header('Content-Type', 'application/json; charset=utf-8')
-            self.end_headers()
-            resp = {'status':'ok', 'message':'Mensaje recibido y guardado.'}
-            self.wfile.write(json.dumps(resp).encode('utf-8'))
-
-        except Exception as e:
-            print("Error BD:", e)
-            self.send_response(500)
-            self.end_headers()
-            self.wfile.write(f'Error al guardar mensaje: {e}'.encode('utf-8'))
+@app.route('/admi')
+def admin():
+    return render_template('admi.html')
 
 
+# -------------------------------------------------
+# LOGIN ADMIN
+# -------------------------------------------------
 
-    # Obtener datos de la tabla
-    def do_GET(self):
-        # Servir admi.html si se pide
-        if self.path == '/admi.html':
-            return super().do_GET()
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.get_json()
 
-        # Ruta para obtener contactos como JSON
-        if self.path == '/ver_contactos':
-            try:
-                conn = pymysql.connect(**DB_CONFIG)
-                cursor = conn.cursor()
-                cursor.execute("SELECT * FROM formulario_contacto2")
-                resultados = cursor.fetchall()
-                cursor.close()
-                conn.close()
+    usuario = data.get("usuario")
+    contrasena = data.get("contrasena")
 
-                datos = []
-                for fila in resultados:
-                    datos.append({
-                        "id": fila[0],
-                        "nombre_cliente": fila[1],
-                        "correo_cliente": fila[2],
-                        "telefono_cliente": fila[3],
-                        "mensaje_cliente": fila[4],
-                        "fecha_envio": str(fila[5])
-                    })
+    conn = pymysql.connect(**DB_CONFIG)
+    cursor = conn.cursor()
 
-                self.send_response(200)
-                self.send_header('Content-Type','application/json; charset=utf-8')
-                self.end_headers()
-                self.wfile.write(json.dumps(datos).encode('utf-8'))
+    cursor.execute(
+        "SELECT contrasena FROM usuarios WHERE usuario=%s",
+        (usuario,)
+    )
+    fila = cursor.fetchone()
 
-            except Exception as e:
-                self.send_response(500)
-                self.end_headers()
-                self.wfile.write(f'Error: {e}'.encode('utf-8'))
+    ok = False
+    if fila and fila["contrasena"] == contrasena:
+        ok = True
 
-        else:
-            super().do_GET()
+    cursor.close()
+    conn.close()
 
+    return jsonify({"ok": ok})
 
-if __name__ == '__main__':
-    os.chdir('.')  # Servir archivos desde la carpeta actual
-    print(f"Servidor corriendo en http://localhost:{PORT} (Ctrl+C para detener)")
-    server = HTTPServer(('0.0.0.0', PORT), MiHandler)
+# -------------------------------------------------
+# ENVIAR CONTACTO
+# -------------------------------------------------
+
+@app.route("/enviar_contacto", methods=["POST"])
+def enviar_contacto():
+    data = request.get_json()
+
+    nombre_cliente = data.get("nombre", "").strip()
+    correo_cliente = data.get("email", "").strip()
+    telefono_cliente = data.get("telefono", "").strip()
+    mensaje_cliente = data.get("mensaje", "").strip()
+
+    if not nombre_cliente or not correo_cliente or not mensaje_cliente:
+        return "Faltan campos obligatorios", 400
+
     try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("Deteniendo servidor...")
-        server.server_close()
+        conn = pymysql.connect(**DB_CONFIG)
+        cursor = conn.cursor()
 
+        sql = """
+            INSERT INTO formulario_contacto2
+            (nombre_cliente, correo_cliente, telefono_cliente, mensaje_cliente)
+            VALUES (%s, %s, %s, %s)
+        """
+        cursor.execute(sql, (
+            nombre_cliente,
+            correo_cliente,
+            telefono_cliente,
+            mensaje_cliente
+        ))
+
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+        return jsonify({
+            "status": "ok",
+            "message": "Mensaje recibido y guardado."
+        })
+
+    except Exception as e:
+        print("Error BD:", e)
+        return f"Error al guardar mensaje: {e}", 500
+
+# -------------------------------------------------
+# VER CONTACTOS (ADMIN)
+# -------------------------------------------------
+
+@app.route("/ver_contactos")
+def ver_contactos():
+    try:
+        conn = pymysql.connect(**DB_CONFIG)
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT * FROM formulario_contacto2")
+        resultados = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return jsonify(resultados)
+
+    except Exception as e:
+        return f"Error: {e}", 500
+
+# -------------------------------------------------
+
+if __name__ == "__main__":
+    print("Servidor Flask corriendo en http://localhost:8000")
+    app.run(host="0.0.0.0", port=8000, debug=True)
